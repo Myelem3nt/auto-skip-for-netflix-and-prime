@@ -1,4 +1,4 @@
-import { secretKey } from "../../secret_key";
+//import { secretKey } from "../../secret_key";
 import { memoizedLocale } from "./util";
 
 export const { version = "NOT_RECEIVED" } = chrome.runtime.getManifest();
