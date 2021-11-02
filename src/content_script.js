@@ -1,4 +1,4 @@
-//import { secretKey } from "../secret_key";
+import { secretKey } from "../secret_key";
 import { sendAnalytics, version, errorTrack } from "./utils/analytics";
 import {
   sleep,
