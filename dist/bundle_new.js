@@ -109,7 +109,6 @@ function fetchDomNode(elements) {
     }
 
     if (domNode) {
-      console.log(element)
       return {
         ...element,
         domNode,
@@ -146,7 +145,6 @@ function getLocaleForPrime() {
     const locale = eachScriptInnerText.match(regEx);
 
     if (locale) {
-      console.log(locale[0])
       return locale[0];
     }
   }
@@ -218,8 +216,6 @@ async function skipNetflixAndPrime() {
   
       if (domNode) {
         const innerText = getInnerText(domNode, type);
-        console.log("innetText "+innerText)
-        console.log(document.querySelectorAll('script[type="text/template"]'))
   
         if (innerText.toLowerCase() === LOADING_TEXT.toLowerCase()) {
           return;
@@ -230,7 +226,6 @@ async function skipNetflixAndPrime() {
         }
   
         await setInnerText(domNode, type, LOADING_TEXT);
-        console.log(domNode, type, LOADING_TEXT)
         domNode.click();
 
       }
@@ -238,4 +233,3 @@ async function skipNetflixAndPrime() {
   }
   
   setInterval(() => skipNetflixAndPrime(), 850);
-  
